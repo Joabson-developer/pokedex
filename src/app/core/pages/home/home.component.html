@@ -1,0 +1,39 @@
+<div class="container home">
+  <div class="row justify-content-center home__contents">
+    <search
+      (emmitSearch)="search($event)"
+      class="col-lg-8 col-md-10 col-sm-12"
+    ></search>
+
+    <error *ngIf="hasError" [messageError]="messageError"></error>
+
+    <ul
+      *ngIf="!hasError"
+      class="home__contents__cards col-lg-8 col-md-10 col-sm-12"
+    >
+      <li
+        *ngFor="let pokemon of getPokemons"
+        class="home__contents__cards__item"
+      >
+        <a [routerLink]="['pokemon/' + pokemon?.status?.id]">
+          <card
+            [name]="pokemon.name"
+            [ArrTypes]="pokemon?.status?.types"
+            [src]="
+              pokemon?.status?.sprites?.other['official-artwork']?.front_default
+            "
+          ></card>
+        </a>
+      </li>
+    </ul>
+
+    <pagination
+      *ngIf="!hasError"
+      [backPage]="backPage"
+      [nextPage]="nextPage"
+      class="col-lg-8 col-md-10 col-sm-12"
+      (emmitSelect)="changePagination($event)"
+      (emmitClick)="fetchPokemons($event)"
+    ></pagination>
+  </div>
+</div>

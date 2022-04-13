@@ -1,0 +1,47 @@
+.c-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 50px auto;
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--bg-pagination);
+    color: var(--color-text-pagination);
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s ease;
+
+    &:disabled {
+      opacity: 0.7;
+      &:hover {
+        background-color: var(--bg-pagination);
+        color: var(--color-text-pagination);
+      }
+    }
+
+    &--active,
+    &:hover {
+      background-color: var(--primary);
+      color: #fff;
+    }
+
+    span {
+      font-size: 22px;
+    }
+
+    .back {
+      margin-right: -10px;
+    }
+    .next {
+      margin-left: 5px;
+    }
+  }
+}

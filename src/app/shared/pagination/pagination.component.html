@@ -1,0 +1,40 @@
+<div class="c-pagination">
+  <button
+    *ngIf="!backPage"
+    (click)="buttonClick(backPage)"
+    class="c-pagination__button"
+    disabled
+  >
+    <span class="material-icons back">arrow_back_ios</span>
+  </button>
+  <button
+    *ngIf="backPage"
+    (click)="buttonClick(backPage)"
+    class="c-pagination__button"
+  >
+    <span class="material-icons back">arrow_back_ios</span>
+  </button>
+
+  <select #self class="form-select w-25" (change)="changeSelect(self)">
+    <option value="10" selected>10</option>
+    <option value="25">25</option>
+    <option value="50">50</option>
+    <option value="100">100</option>
+  </select>
+
+  <button
+    *ngIf="!nextPage"
+    (click)="buttonClick(nextPage)"
+    class="c-pagination__button"
+    disabled
+  >
+    <span class="material-icons next"> arrow_forward_ios </span>
+  </button>
+  <button
+    *ngIf="nextPage"
+    (click)="buttonClick(nextPage)"
+    class="c-pagination__button"
+  >
+    <span class="material-icons next"> arrow_forward_ios </span>
+  </button>
+</div>

@@ -1,0 +1,9 @@
+.form-select {
+  border: 3px solid var(--bg-input);
+
+  &:focus {
+    border-color: var(--bg-input) !important;
+    outline: 0;
+    box-shadow: none !important;
+  }
+}

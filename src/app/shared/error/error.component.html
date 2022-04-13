@@ -1,0 +1,15 @@
+<div
+  class="container error d-flex flex-sm-column-reverse flex-md-row flex-column-reverse"
+>
+  <div
+    class="error__text d-flex flex-column align-items-sm-center align-items-md-start align-items-center"
+  >
+    <h2>{{ messageError?.title }}</h2>
+    <span>{{ messageError?.description }}</span>
+  </div>
+  <img
+    *ngIf="!messageError.noImage"
+    src="./assets/images/error.png"
+    aria-hidden="true"
+  />
+</div>

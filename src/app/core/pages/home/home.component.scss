@@ -1,0 +1,27 @@
+.home {
+  &__contents {
+    &__cards {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      transition: all 0.3s ease;
+
+      &__item {
+        border-radius: 10px;
+        min-height: 157px;
+        min-width: 250px;
+        flex: 1;
+        display: flex;
+        overflow: hidden;
+
+        a {
+          width: 100%;
+          height: 100%;
+          text-decoration: none;
+          color: var(--color-text-card);
+        }
+      }
+    }
+  }
+}

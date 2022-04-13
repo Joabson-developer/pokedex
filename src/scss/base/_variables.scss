@@ -1,0 +1,40 @@
+:root {
+  --primary: #ff5473;
+  --bg-body: #ffffff;
+  --color-title-body: #262835;
+
+  --bg-input: #efefef;
+  --color-text-input: #262835;
+  --color-icon-input: #262835;
+
+  --bg-card: #51535d;
+  --color-text-card: #ffffff;
+  --bg-chips-card: #262835;
+
+  --bg-pagination: #51535d;
+  --color-text-pagination: #efefef;
+
+  transition: all 0.5s ease;
+
+  & .dark-theme {
+    --primary: #ff5473;
+    --bg-body: #262835;
+    --color-title-body: #ffffff;
+
+    --bg-input: #51535d;
+    --color-text-input: #ffffff;
+    --color-icon-input: #ffffff;
+
+    --bg-card: #ffffff;
+    --color-text-card: #262835;
+    --bg-chips-card: #efefef;
+
+    --bg-pagination: #efefef;
+    --color-text-pagination: #51535d;
+    .c-card {
+      &__image {
+        background-image: url("../../assets/images/bubbles.png");
+      }
+    }
+  }
+}

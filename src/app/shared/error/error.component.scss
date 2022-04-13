@@ -1,0 +1,39 @@
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+
+  &__text {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.44);
+    h2 {
+      font-size: 80px;
+      line-height: 70px;
+
+      @media only screen and (max-width: 600px) {
+        font-size: 60px;
+        line-height: 50px;
+      }
+    }
+
+    span {
+      font-size: 28px;
+      font-weight: 300;
+
+      @media only screen and (max-width: 600px) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  img {
+    max-width: 253px;
+
+    @media only screen and (max-width: 600px) {
+      max-width: 200px;
+    }
+  }
+}

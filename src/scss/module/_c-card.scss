@@ -1,0 +1,64 @@
+.c-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-card);
+  transition: all 0.5s ease;
+  border-radius: 10px;
+
+  &:hover {
+    transform: scale(0.9);
+    opacity: 0.9;
+    background-color: var(--primary);
+  }
+
+  &__information {
+    color: var(--color-text-card);
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      font-style: italic;
+      font-weight: 900;
+      font-size: 22px;
+      line-height: 26px;
+      margin-bottom: 5px;
+      text-transform: capitalize;
+    }
+
+    span {
+      margin: 5px 0;
+      max-height: 20px;
+      width: 70px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-chips-card);
+      border-radius: 32px;
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 12px;
+    }
+  }
+
+  &__image {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 10px;
+    width: 110px;
+    background-image: url("../../assets/images/bubbles-dark.png");
+    background-repeat: no-repeat;
+    background-position: 0 20px;
+
+    img {
+      max-width: 100%;
+      pointer-events: none;
+    }
+  }
+}

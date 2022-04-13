@@ -1,0 +1,29 @@
+.pokedex {
+  &__button-theme {
+    position: fixed;
+    right: 20px;
+    top: 15px;
+    font-size: 40px;
+    cursor: pointer;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  &__title {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 45px;
+
+    &__logo {
+      margin-right: 8px;
+    }
+
+    &__text {
+      font-size: 32px;
+      font-style: italic;
+      font-weight: 900;
+      line-height: 38px;
+    }
+  }
+}
