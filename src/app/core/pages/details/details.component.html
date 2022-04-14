@@ -1,1 +1,44 @@
-<p>details works!</p>
+<section class="container details" *ngIf="pokemon">
+  <div class="row justify-content-center details__contents">
+    <h2
+      class="details__contents__title col-lg-8 col-md-10 col-sm-12 d-flex flex-column align-items-end"
+    >
+      <span class="details__contents__title__japanese">{{
+        pokemon[1]?.names[0]?.name
+      }}</span>
+      <span class="details__contents__title__portuguese">{{
+        pokemon[0]?.name
+      }}</span>
+    </h2>
+
+    <div class="details__contents__stats col-lg-8 col-md-10 col-sm-12">
+      <span
+        class="material-icons details__contents__stats__back"
+        role="button"
+        aria-label="Voltar para a tela inicial"
+        routerLink="/"
+      >
+        home
+      </span>
+
+      <img
+        [src]="pokemon[0]?.sprites?.other['official-artwork']?.front_default"
+        [alt]="'Imagem do pokemon ' + pokemon[0]?.name"
+      />
+
+      <h3 class="details__contents__stats__title">Estatísticas</h3>
+
+      <ul class="details__contents__stats__skills">
+        <li
+          class="details__contents__stats__skills__item"
+          *ngFor="let stats of pokemon[0].stats"
+        >
+          <skill-bar [min]="stats.base_stat" [max]="maxStat"></skill-bar>
+          <span class="details__contents__stats__skills__item__legend">{{
+            stats.stat.name
+          }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

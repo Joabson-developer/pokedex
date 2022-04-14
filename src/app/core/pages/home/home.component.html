@@ -1,8 +1,9 @@
-<div class="container home">
+<section class="container home">
   <div class="row justify-content-center home__contents">
     <search
       (emmitSearch)="search($event)"
       class="col-lg-8 col-md-10 col-sm-12"
+      [valueInput]="clearInput"
     ></search>
 
     <error *ngIf="hasError" [messageError]="messageError"></error>
@@ -36,4 +37,4 @@
       (emmitClick)="fetchPokemons($event)"
     ></pagination>
   </div>
-</div>
+</section>
