@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'skill-bar',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./skill-bar.component.scss'],
 })
 export class SkillBarComponent implements OnInit {
+  @Input() min: any = 0;
+  @Input() max: any = 0;
+
   constructor() {}
 
   ngOnInit(): void {}

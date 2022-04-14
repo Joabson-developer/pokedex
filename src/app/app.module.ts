@@ -14,6 +14,7 @@ import { PaginationComponent } from './shared/pagination/pagination.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ErrorComponent } from './shared/error/error.component';
 import { SkillBarComponent } from './shared/skill-bar/skill-bar.component';
+import { HeightControlDirective } from './directives/height-control.directive';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { SkillBarComponent } from './shared/skill-bar/skill-bar.component';
     PaginationComponent,
     ErrorComponent,
     SkillBarComponent,
+    HeightControlDirective,
   ],
   imports: [
     BrowserModule,

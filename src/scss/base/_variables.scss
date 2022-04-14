@@ -14,6 +14,9 @@
   --bg-pagination: #51535d;
   --color-text-pagination: #efefef;
 
+  --bg-thumb: #efefef;
+  --color-text-thumb: #51535d;
+
   transition: all 0.5s ease;
 
   & .dark-theme {
@@ -31,6 +34,10 @@
 
     --bg-pagination: #efefef;
     --color-text-pagination: #51535d;
+
+    --bg-thumb: #51535d;
+    --color-text-thumb: #efefef;
+
     .c-card {
       &__image {
         background-image: url("../../assets/images/bubbles.png");

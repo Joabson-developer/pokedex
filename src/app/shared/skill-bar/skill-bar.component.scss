@@ -1,0 +1,46 @@
+:host {
+  width: 20px;
+}
+.skill-bar {
+  --bg-body: #262835;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: var(--bg-body);
+  height: 250px;
+  width: 20px;
+
+  &__content {
+    background-color: var(--primary);
+    width: 100%;
+    border-radius: 15px;
+    position: relative;
+
+    &:hover > &__thumb {
+      width: 200%;
+      opacity: 1;
+    }
+
+    &__thumb {
+      width: 0;
+      aspect-ratio: 1;
+      background: var(--bg-thumb);
+      color: var(--color-text-thumb);
+      border-radius: 50%;
+      position: absolute;
+      opacity: 0;
+      left: 50%;
+      top: -20%;
+      transform: translate(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+      transition: all 0.1s ease;
+      cursor: pointer;
+      font-weight: 900;
+      z-index: 5;
+    }
+  }
+}

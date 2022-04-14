@@ -1,1 +1,5 @@
-<p>skill-bar works!</p>
+<div class="skill-bar" heightControl [max]="max">
+  <div class="skill-bar__content" heightControl [min]="min">
+    <span class="skill-bar__content__thumb">{{ min }}</span>
+  </div>
+</div>
