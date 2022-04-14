@@ -68,4 +68,6 @@ export class HomeComponent implements OnInit {
       this.nextPage = this.urlSearchParams(res.next);
     });
   }
+
+  public onScroll() {}
 }

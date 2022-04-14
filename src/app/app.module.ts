@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ErrorComponent } from './shared/error/error.component';
 import { SkillBarComponent } from './shared/skill-bar/skill-bar.component';
 import { HeightControlDirective } from './directives/height-control.directive';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { HeightControlDirective } from './directives/height-control.directive';
     HttpClientModule,
     BrowserAnimationsModule,
     MatSelectModule,
+    InfiniteScrollModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

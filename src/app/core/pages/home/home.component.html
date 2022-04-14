@@ -11,6 +11,10 @@
     <ul
       *ngIf="!hasError"
       class="home__contents__cards col-lg-8 col-md-10 col-sm-12"
+      infiniteScroll
+      [infiniteScrollDistance]="2"
+      [infiniteScrollThrottle]="50"
+      (scrolled)="onScroll()"
     >
       <li
         *ngFor="let pokemon of getPokemons"
