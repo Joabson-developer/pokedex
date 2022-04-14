@@ -3,6 +3,7 @@
     <search
       (emmitSearch)="search($event)"
       class="col-lg-8 col-md-10 col-sm-12"
+      [valueInput]="clearInput"
     ></search>
 
     <error *ngIf="hasError" [messageError]="messageError"></error>

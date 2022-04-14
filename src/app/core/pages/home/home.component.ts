@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
   public nextPage!: string;
   public hasError!: boolean;
   public messageError!: Message;
+  public clearInput: string = '';
 
   constructor(private fetchPokemonsService: FetchPokemonsService) {}
 
@@ -26,6 +27,7 @@ export class HomeComponent implements OnInit {
   }
 
   public search(value: string) {
+    this.clearInput = value;
     const filter = this.setPokemons.filter((res: any) => {
       return !res.name.indexOf(value.trim().toLocaleLowerCase());
     });
@@ -36,6 +38,7 @@ export class HomeComponent implements OnInit {
   }
 
   public changePagination(value: string) {
+    this.clearInput = '';
     this.fetchPokemonsService.limitPagination(value);
 
     this.fetchPokemons();
@@ -52,6 +55,7 @@ export class HomeComponent implements OnInit {
   }
 
   public fetchPokemons(newPage?: string) {
+    this.clearInput = '';
     if (newPage) {
       this.fetchPokemonsService.setNewOffset(newPage);
     }
